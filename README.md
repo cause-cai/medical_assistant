@@ -1,26 +1,26 @@
 # Qwen3微调实战：医疗推理聊天
 
-- **基础模型**：[Qwen3-1.7B](https://modelscope.cn/models/Qwen/Qwen3-0.6B/summary)
+- **基础模型**：[Qwen3-0.6B](https://modelscope.cn/models/Qwen/Qwen3-0.6B/summary)
 - **数据集**：[delicate_medical_r1_data](https://modelscope.oss-cn-beijing.aliyuncs.com)
 - **SwanLab**：[qwen3-sft-medical](https://swanlab.cn/@codec/qwen3-sft-medical?utm_source=website_qr&utm_medium=qr_scan)
 - **微调方式**：全参数微调
-  ## 1. 安装环境
+## 1. 安装环境
 
   ```
   pip install -r requirements.txt
   ```
-  ## 2. 下载数据
+## 2. 下载数据
   ```
   python data.py
   ```
-  ## 3. 登录SwanLab
+## 3. 登录SwanLab
 1. 前往[swanlab](https://swanlab.cn/space/~/settings)复制你的API Key，粘贴到下面的代码中
 2. 如果你不希望将登录信息保存到该计算机中，可将`save=True`去掉（每次运行训练需要重新执行下面的代码块）
 3. import swanlab
-```
-swanlab.login(api_key="[你的API Key]", save=True)/os.environ['SWANLAB_API_KEY'] ="[你的API Key]"
-```  
-  ## 4. 开启全参数微调
+ ```
+ swanlab.login(api_key="[你的API Key]", save=True)/os.environ['SWANLAB_API_KEY'] ="[你的API Key]"
+ ```  
+## 4. 开启全参数微调
 ```  
 import json
 import pandas as pd
